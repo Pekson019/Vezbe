@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slider, sortiranje elementa i modal</title>
+</head>
+<body>
+    
+    <div class="nav">
+        <button id="navBtn">MENU</button>
+        <div class="nav-links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slider-items">
+            <button id="leftButton"><</button>
+            <img src="images/prvaSlika.jpg" alt="" style="display: block;">
+            <img src="images/drugaSlika.jpg" alt="" style="display: none;">
+            <img src="images/trecaSlika.jpg" alt="" style="display: none;">
+            <img src="images/cetvrtaSlika.jpg" alt="" style="display: none;">
+            <button id="rightButton">></button>
+        </div>
+    </div>
+
+    <div class="elements-wrapper">
+        <div class="elements-buttons">
+            <button onclick="sortiraj(this)" data-category="sve" >Sve</button>
+            <button data-category="igrice" onclick="sortiraj(this)">Igrice</button>
+            <button data-category="konzole" onclick="sortiraj(this)">Konzole</button>
+            <button data-category="oprema" onclick="sortiraj(this)">Oprema</button>
+        </div>
+        <div class="elements">
+            <div class="elements-content-wrapper" data-category="igrice">
+                <p>Igrice1</p>
+            </div>
+            <div class="elements-content-wrapper" data-category="igrice, konzole">
+                <p>Igrice i konzole</p>
+            </div>
+            <div class="elements-content-wrapper" data-category="konzole">
+                <p>Konzole1</p>
+            </div>
+            <div class="elements-content-wrapper" data-category="igrice">
+                <p>Igrice2</p>
+            </div>
+            <div class="elements-content-wrapper" data-category="oprema">
+                <p>Oprema1</p>
+            </div>
+            <div class="elements-content-wrapper" data-category="oprema">
+                <p>Oprema2</p>
+            </div>
+        </div>
+    </div>
+
+    
+        <button id="modalBtn">Modal</button>
+        <div class="modal">
+            <div class="overlay">
+                <div class="popup">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, perferendis et? 
+                    Dolorem accusantium aliquam sit cupiditate pariatur laudantium possimus, magni fuga quibusdam, 
+                    at commodi minima expedita fugiat. Porro, iure ab.
+                    </p>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
